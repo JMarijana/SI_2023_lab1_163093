@@ -1,0 +1,31 @@
+1.git init
+2.git remote add origin https://github.com/JMarijana/SI_2023_lab1_163093.git
+3.git add README.md
+4.git commit -m "Initial commit"
+5.git add SILab1.java
+6.git commit -m "Add java class"
+7.git push -u origin master
+8.git branch bug1
+9.git branch bug2
+10.git branch bug3
+11.git checkout bug1
+12.git add "SILab1.java"
+13.git commit -m "Fix wrong loop for reading"
+14.git checkout bug2
+15.git add "SILab1.java"
+16.git commit -m "Fix wrong condition in filterOddNumbers"
+17.git checkout bug3
+18.git add "SILab1.java"
+19.git commit -m "Fix method sumEvenNumbers"
+20.git push --all origin
+21.git checkout master
+22. git merge bug1
+23.git push --all origin
+24. git merge bug2
+25.git push --all origin
+26.git checkout bug3
+27.git rebase master
+28.git checkout master
+29.git merge bug3
+30.git push -all origin
+31.git push --force origin bug3:master

@@ -1,0 +1,298 @@
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093
+$ git init
+Initialized empty Git repository in C:/Users/vikto/Desktop/SI_2023_lab1_163093/.git/
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git remote add origin https://github.com/JMarijana/SI_2023_lab1_163093.git    
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git add README.md
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git commit -m "Initial commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'vikto@Viktor.(none)')
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ ^C
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git config --global user.name "JMarijana"
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git config --global user.email "jon.marijana@outlook.com"
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) c26d32f] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git add SILab.java
+fatal: pathspec 'SILab.java' did not match any files
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git add SILab1.java
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git commit -m "Add java class"
+[master 5952bd5] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ ^C
+
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push -u origin master
+
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 830 bytes | 207.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/JMarijana/SI_2023_lab1_163093.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git branch bug1
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git branch bug2
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git branch bug3
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug1)
+$ git add SILab1.java
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug1)
+$ git commit -m "Fix wrong loop for reading"
+[bug1 59f5f83] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug2)
+$ git add SILab1.java
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug2)
+$ git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 4047a14] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug2)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git status
+On branch bug3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git add SILab1.java
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git commit -m "Fix method sumEvenNumbers"
+[bug3 68ff9c6] Fix method sumEvenNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git push -all origin
+error: did you mean `--all` (with two dashes)?
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-: 11, done.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Delta compression using up to 4 threads
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+To https://github.com/JMarijana/SI_2023_lab1_163093.git
+ * [new branch]      bug1 -> bug1
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$  [new branch]      bug3 -> bug3
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ itched to branch 'master'
+Your branch is up to date with 'origin/master'.
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ kto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git merge bug1
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ st-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ kto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push --all origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$  5952bd5..59f5f83  master -> master
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ to-merging SILab1.java
+hint: Waiting for your editor to close the file...
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git merge bug2
+Already up to date.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push --all origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/JMarijana/SI_2023_lab1_163093.git
+   59f5f83..3669dbf  master -> master
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git rebase master
+Successfully rebased and updated refs/heads/bug3.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git merge bug3
+Updating 3669dbf..572e9de
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ push -all origin
+bash: push: command not found
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push -all origin
+error: did you mean `--all` (with two dashes)?
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push --all origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/JMarijana/SI_2023_lab1_163093.git
+   3669dbf..572e9de  master -> master
+ ! [rejected]        bug3 -> bug3 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/JMarijana/SI_2023_lab1_163093.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push --force origin bug3:master
+Everything up-to-date
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$ git push --all origin
+To https://github.com/JMarijana/SI_2023_lab1_163093.git
+ ! [rejected]        bug3 -> bug3 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/JMarijana/SI_2023_lab1_163093.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+vikto@Viktor MINGW64 ~/Desktop/SI_2023_lab1_163093 (master)
+$
